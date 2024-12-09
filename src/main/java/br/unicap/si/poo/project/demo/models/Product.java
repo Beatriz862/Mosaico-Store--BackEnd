@@ -3,6 +3,8 @@ package  br.unicap.si.poo.project.demo.models;
 import java.io.Serializable;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.property.access.spi.Getter;
+import org.hibernate.property.access.spi.Setter;
 
  @Entity
  @NoArgsConstructor
@@ -38,3 +40,4 @@ public class Product implements Serializable{
     @ManyToOne
     @JoinColumn(name="sale_by", nullable = false, referencedColumnName = "PartnerStore_ID")
     private PartnerStore saleBy;
+}
